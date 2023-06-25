@@ -1,9 +1,14 @@
 version: '3.6'
 services:
-  java:
+  # コンテナイメージ名は<プロジェクト名>+「-」+<サービス名>
+  test:
+    # 示したパスのDockerfileを実行する
     build: ./docker/java
+    # 左：ホスト、右：コンテナ環境
     ports:
       - 8080:8080
+    # ttyをtrueにすることで、コンテナ内でのコマンド操作が可能になる
     tty: true
+    # これでやってるのはバインドマウント。ホスト側をコンテナ側に共有している。
     volumes:
       - ./server/src:/usr/src/yamada1:cached
