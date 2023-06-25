@@ -1,11 +1,12 @@
-#使うDockerイメージ
+# 使うDockerイメージ
 FROM mysql
 
-#ポートを開ける
+# ポートを開ける
+# mysqlのデフォルトポート
 EXPOSE 3306
 
-#MySQL設定ファイルをイメージ内にコピー
-ADD my.cnf /etc/mysql/conf.d/my.cnf
+# MySQL設定ファイルをイメージ内にコピー
+COPY my.cnf /etc/mysql/conf.d/my.cnf
 
-#docker runに実行される
+# docker run時に実行される
 CMD ["mysqld"]

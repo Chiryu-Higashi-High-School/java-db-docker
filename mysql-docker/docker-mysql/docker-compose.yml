@@ -3,10 +3,10 @@ version: '3'
 services:
   mysql:
     # Dockerfileからビルドすることを示す
-    build: ./mysql/db/ 
+    build: ./mysql/db/
     volumes:
       # 初期データをマウントする場所
-      - ./mysql/DB:/docker-entrypoint-initdb.d 
+      - ./mysql/DB:/docker-entrypoint-initdb.d
     # イメージの名前
     image: original_mysql_world
     # コンテナ内のMySQLを起動する際のパスワードを設定
