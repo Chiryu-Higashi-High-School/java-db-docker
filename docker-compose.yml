@@ -6,4 +6,4 @@ services:
       - 8080:8080
     tty: true
     volumes:
-      - ./server/src:/usr/src:cached
+      - ./server/src:/usr/src/yamada1:cached
