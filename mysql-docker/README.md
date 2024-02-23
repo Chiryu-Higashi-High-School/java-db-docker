@@ -1,3 +1,31 @@
-## ref
-- https://syslog.life/2023/02/20/mysql-docker-compose-container_create_build/
-- https://qiita.com/taniann/items/ed9ec892d91e5af962c6
+```bash
+docker compose up -d
+```
+
+```bash
+docker compose exec mysql-db /bin/bash
+```
+
+```bash
+mysql -u root -p
+```
+
+```sql
+show databases;
+```
+
+```sql
+use mydatabase;
+```
+
+```sql
+show tables;
+```
+
+```sql
+INSERT INTO mytable (name) VALUES ('John');
+```
+
+```sql
+SELECT * FROM mytable;
+```

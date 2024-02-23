@@ -1,0 +1,10 @@
+version: '3.6'
+services:
+  mysql-db:
+    build: ./docker/mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    volumes:
+      - ./Docker/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
